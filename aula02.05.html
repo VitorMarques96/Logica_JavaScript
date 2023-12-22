@@ -14,8 +14,26 @@
     <h1>Aula de condicionais</h1>
 
     <script>
-        
+        //Cria as variáveis e as converte para Float
+        var n1 = parseFloat(prompt('Digite a primeira nota: '));
+        var n2 = parseFloat(prompt('Digite a segunda nota: '));
+        var n3 = parseFloat(prompt('Digite a quarta nota: '));
+        var n4 = parseFloat(prompt('Digite a quarta nota: '))
 
+        //Calcula a média das notas
+        media = (n1+n2+n3+n4)/4;
+
+        //Estrutura condicional de aprovação/reprovação
+        if (media >= 6) {
+            alert('Sua média final foi: ' + media);
+            alert('Parabéns, você foi APROVADO!')
+        }else{
+            alert('Sua média final foi: ' + media);
+            alert('Você está de RECUPERAÇÃO.')
+        }
+
+        //Despedida do programa
+        alert('Obrigado por usar o sistema');
     </script>
     
 
