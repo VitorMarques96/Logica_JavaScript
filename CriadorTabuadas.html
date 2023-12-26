@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4.01</title>
+</head>
+
+
+<body>
+    <h1>Criador de tabuadas</h1>
+
+    <button onclick="mostrar_tabuada()">Criar</button>
+    <button onclick="limpar_tabuada()">Limpar</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        //FUNÇÃO DO BOTÃO CRIAR 
+        function mostrar_tabuada() {
+
+            //Perguntar um número para o usuário e converter para Inteiro
+            var n = parseFloat(prompt('Digite o número que deseja realizar a tabuada: '));
+
+            //Limpa a tabuada anterior
+            limpar_tabuada();
+
+            //Criar uma variável que será o indice
+            var i = 1;
+
+            //Enquanto o indice for menor ou igual a 1000
+            while (i <= 100) {
+                
+                //Cria as linhas da tabuada
+                mensagem += n + ' x ' + i + ' = ' + (n * i) + '<br>';
+
+                //Incrementador
+                i++;
+            }
+
+            //Mostra mensagem no output
+            output.innerHTML = mensagem;
+        }
+
+
+
+        //FUNÇÃO DO BOTÃO LIMPAR
+        function limpar_tabuada() {
+
+            //Esvazia a variável mensagem
+            mensagem = '';
+
+            //Reescreve a variável mensagem
+            output.innerHTML = mensagem;
+        }
+
+
+
+        var output = document.querySelector('#output');
+        var mensagem = '';
+        output.innerHTML = mensagem;
+        
+    </script>
+
+</body>
+
+</html>

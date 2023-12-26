@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Calculadora</title>
+</head>
+
+
+<body>
+
+    <h1>Mini Calculadora</h1>
+    
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+
+    <div id="output"></div>
+
+
+
+    <script>
+        //Pede um número e armazena na variável n1
+        var n1 = parseFloat(prompt('Digite um número para começar a calcular: '));
+        
+        //Chama a função escreve()
+        escreve();
+
+
+        //Função escreve()
+        function escreve() {
+            //Faz a conexão com o <div> do HTML
+            var output = document.querySelector('#output');
+            //Atribui ao <div> a variável n1
+            output.innerHTML = n1;
+        }
+
+
+        //Função somar()
+        function somar(){
+            //Cria a variável do próximo número a ser somado
+            var n = parseFloat(prompt('Digite outro número para somar com o primeiro: '));
+            //Soma o primeiro número digitado com o segundo número
+            n1 += n;
+            //Chama a função escreve() para imprimir o resultado no HTML  
+            escreve();
+        }
+
+        //Função subtrair()
+        function subtrair(){
+            //Cria a variável do próximo número a ser subtraído
+            var n = parseFloat(prompt('Digite outro número para subtrair do primeiro: '));
+            //Subtrai o primeiro número digitado com o segundo número
+            n1 -= n;
+            //Chama a função escreve() para imprimir o resultado no HTML  
+            escreve();
+        }
+
+        //Função multiplicar()
+        function multiplicar(){
+            //Cria a variável do próximo número a ser multiplicado
+            var n = parseFloat(prompt('Digite outro número para multiplicar com o primeiro: '));
+            //Multiplica o primeiro número digitado pelo segundo
+            n1 *= n;
+            //Chama a função escreve() para imprimir o resultado no HTML
+            escreve();
+        }
+
+        //Função dividir()
+        function dividir(){
+            //Cria a variável do próximo número a ser dividido
+            var n = parseFloat(prompt('Digite outro número para dividir com o primeiro: '));
+            //Divide o primeiro número pelo segundo
+            n1 /= n;
+            //Chama a função escreve() para imprimir o resultado no HTML
+            escreve();
+        }
+    </script>
+
+</body>
+
+</html>
